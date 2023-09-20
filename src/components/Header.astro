@@ -1,14 +1,48 @@
 ---
 import Search from '@/components/Search'
 ---
+
 <header class='p-4 prose-a:no-underline'>
   <div class='flex justify-between items-center p-2'>
     <div class='flex'>
-      <a href='/' class='px-4  rounded py-2 hover:bg-neutral-200 dark:hover:bg-neutral-600'>Inicio</a>
-      <a href='/category/cat1' class='px-4 py-2 rounded hover:bg-neutral-200 dark:hover:bg-neutral-600'>Blog</a>
-      <a href='/category/cat4' class='px-4 py-2 rounded hover:bg-neutral-200 dark:hover:bg-neutral-600'>Proyectos</a>
+      <!-- Botón para activar el menú hamburguesa -->
+      <button id="menu-toggle" class="px-4 py-2 rounded hover:bg-neutral-200 dark:hover:bg-neutral-600">
+        Menú
+      </button>
+      <!-- Los enlaces del menú (inicialmente ocultos) -->
+      <div id="menu-links" class="hidden">
+        <a href='/' class='px-4  rounded py-2 hover:bg-neutral-200 dark:hover:bg-neutral-600'>Inicio</a>
+        <a href='/category/cat1' class='px-4 py-2 rounded hover:bg-neutral-200 dark:hover:bg-neutral-600'>Yo</a>
+        <a href='/category/cat1' class='px-4 py-2 rounded hover:bg-neutral-200 dark:hover:bg-neutral-600'>Blog</a>
+        <a href='/category/cat4' class='px-4 py-2 rounded hover:bg-neutral-200 dark:hover:bg-neutral-600'>Proyectos</a>
+      </div>
     </div>
     
     <Search />
   </div>
 </header>
+<style>
+  /* Agrega estilos para el botón de activación */
+#menu-toggle {
+  display: none; /* Oculta el botón en tamaños de pantalla normales */
+  cursor: pointer;
+}
+
+/* Agrega estilos para el menú en sí */
+#menu-links {
+  display: flex; /* Muestra los enlaces como una lista horizontal */
+}
+
+/* Estilos para cambiar la visibilidad del menú cuando el botón se muestra */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block; /* Muestra el botón en tamaños de pantalla más pequeños */
+  }
+
+  #menu-links {
+    display: none; /* Oculta el menú en tamaños de pantalla más pequeños */
+  }
+}
+
+</style>
+
