@@ -3,114 +3,112 @@ title: Tailwind typography
 slug: tailwind-typography
 description: The @tailwindcss/typography plugin is our attempt to give you what you actually want, without any of the downsides of doing something stupid like disabling our base styles.
 category:
-  - cat1
+  - blog
 tags:
   - Tailwind
   - Astro
   - Jamstack
 pubDate: 2023-09-08
-cover: src/images/astro9.webp
+cover: src/images/tail.png
 coverAlt: VisVrs-tailwind-typography
-author: VV
+author: YovanEnovore
 ---
+Hasta ahora, intentar estilizar un artículo, documento o publicación de blog con Tailwind ha sido una tarea tediosa que requería un ojo agudo para la tipografía y una gran cantidad de CSS personalizado complejo.
 
-Until now, trying to style an article, document, or blog post with Tailwind has been a tedious task that required a keen eye for typography and a lot of complex custom CSS.
+Por defecto, Tailwind elimina todo el estilo predeterminado del navegador de párrafos, encabezados, listas y más. Esto resulta muy útil para construir interfaces de aplicaciones porque pasas menos tiempo deshaciendo los estilos del agente de usuario, pero cuando *realmente estás* tratando de estilizar contenido que proviene de un editor de texto enriquecido en un sistema de gestión de contenido o un archivo de marcado, puede ser sorprendente e intuitivo.
 
-By default, Tailwind removes all of the default browser styling from paragraphs, headings, lists and more. This ends up being really useful for building application UIs because you spend less time undoing user-agent styles, but when you *really are* just trying to style some content that came from a rich-text editor in a CMS or a markdown file, it can be surprising and unintuitive.
+Recibimos muchas quejas al respecto, con personas que nos preguntan regularmente cosas como:
 
-We get lots of complaints about it actually, with people regularly asking us things like:
+> ¿Por qué Tailwind está eliminando los estilos predeterminados en mis elementos `h1`? ¿Cómo puedo desactivar esto? ¿Qué quieres decir con que también pierdo todos los otros estilos base?
 
-> Why is Tailwind removing the default styles on my `h1` elements? How do I disable this? What do you mean I lose all the other base styles too?
+Te entendemos, pero no estamos convencidos de que simplemente desactivar nuestros estilos base sea lo que realmente deseas. No quieres tener que eliminar márgenes molestos cada vez que uses un elemento `p` en una parte de la interfaz de tu panel de control. Y dudamos que realmente quieras que tus publicaciones de blog utilicen los estilos del agente de usuario; quieres que se vean *geniales*, no terribles.
 
-We hear you, but we're not convinced that simply disabling our base styles is what you really want. You don't want to have to remove annoying margins every time you use a `p` element in a piece of your dashboard UI. And I doubt you really want your blog posts to use the user-agent styles either — you want them to look *awesome*, not awful.
+El complemento `@tailwindcss/typography` es nuestro intento de darte lo que *realmente* deseas, sin ninguno de los inconvenientes de hacer algo tonto como desactivar nuestros estilos base.
 
-The `@tailwindcss/typography` plugin is our attempt to give you what you *actually* want, without any of the downsides of doing something stupid like disabling our base styles.
-
-It adds a new `prose` class that you can slap on any block of vanilla HTML content and turn it into a beautiful, well-formatted document:
+Agrega una nueva clase `prose` que puedes aplicar a cualquier bloque de contenido HTML básico y convertirlo en un documento hermoso y bien formateado:
 
 ```html
 <article class="prose">
-  <h1>Garlic bread with cheese: What the science tells us</h1>
+  <h1>Pan de ajo con queso: lo que la ciencia nos dice</h1>
   <p>
-    For years parents have espoused the health benefits of eating garlic bread with cheese to their
-    children, with the food earning such an iconic status in our culture that kids will often dress
-    up as warm, cheesy loaf for Halloween.
+    Durante años, los padres han elogiado los beneficios para la salud de comer pan de ajo con queso a sus
+    hijos, con la comida ganando un estatus icónico en nuestra cultura, al punto que los niños a menudo se visten
+    como un cálido pan con queso para Halloween.
   </p>
   <p>
-    But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
-    springing up around the country.
+    Pero un estudio reciente muestra que el famoso aperitivo podría estar relacionado con una serie de casos de rabia
+    que están apareciendo en todo el país.
   </p>
   <!-- ... -->
 </article>
 ```
-
-For more information about how to use the plugin and the features it includes, [read the documentation](https://github.com/tailwindcss/typography/blob/master/README.md).
+Para obtener más información sobre cómo utilizar el complemento y las funciones que incluye, [lee la documentación](https://github.com/tailwindcss/typography/blob/master/README.md).
 
 ------
 
-## What to expect from here on out
+## Qué esperar a partir de este punto
 
-What follows from here is just a bunch of absolute nonsense I've written to dogfood the plugin itself. It includes every sensible typographic element I could think of, like **bold text**, unordered lists, ordered lists, code blocks, block quotes, *and even italics*.
+Lo que sigue a partir de aquí es simplemente un montón de tonterías absolutas que he escrito para poner a prueba el propio complemento. Incluye cada elemento tipográfico sensato que se me ocurrió, como texto en **negrita**, listas no ordenadas, listas ordenadas, bloques de código, citas en bloque, *e incluso cursiva*.
 
-It's important to cover all of these use cases for a few reasons:
+Es importante cubrir todos estos casos de uso por algunas razones:
 
-1. We want everything to look good out of the box.
-2. Really just the first reason, that's the whole point of the plugin.
-3. Here's a third pretend reason though a list with three items looks more realistic than a list with two items.
+1. Queremos que todo se vea bien desde el principio.
+2. Realmente, solo la primera razón, ese es el punto principal del complemento.
+3. Aquí tienes una tercera razón ficticia, aunque una lista con tres elementos parece más realista que una lista con dos elementos.
 
-Now we're going to try out another header style.
+Ahora vamos a probar otro estilo de encabezado.
 
-### Typography should be easy
+### La tipografía debería ser fácil
 
-So that's a header for you — with any luck if we've done our job correctly that will look pretty reasonable.
+Así que aquí tienes un encabezado, con suerte, si hemos hecho nuestro trabajo correctamente, se verá bastante razonable.
 
-Something a wise person once told me about typography is:
+Alguien sabio me dijo una vez sobre la tipografía:
 
-> Typography is pretty important if you don't want your stuff to look like trash. Make it good then it won't be bad.
+> La tipografía es bastante importante si no quieres que tus cosas parezcan basura. Hazlo bien y no será malo.
 
-It's probably important that images look okay here by default as well:
+Probablemente sea importante que las imágenes se vean bien aquí por defecto también:
 
-![img](https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80)Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+![img](https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80)Contrariamente a la creencia popular, Lorem Ipsum no es simplemente un texto aleatorio. Tiene sus raíces en una obra de la literatura latina clásica del año 45 a.C., lo que lo convierte en un texto de más de 2000 años de antigüedad.
 
-Now I'm going to show you an example of an unordered list to make sure that looks good, too:
+Ahora voy a mostrarte un ejemplo de una lista no ordenada para asegurarnos de que también se vea bien:
 
-- So here is the first item in this list.
-- In this example we're keeping the items short.
-- Later, we'll use longer, more complex list items.
+- Así que aquí tienes el primer elemento de esta lista.
+- En este ejemplo, mantenemos los elementos cortos.
+- Más adelante, usaremos elementos de lista más largos y complejos.
 
-And that's the end of this section.
+Y eso es el final de esta sección.
 
-## What if we stack headings?
+## ¿Qué pasa si apilamos encabezados?
 
-### We should make sure that looks good, too.
+### Deberíamos asegurarnos de que también se vea bien.
 
-Sometimes you have headings directly underneath each other. In those cases you often have to undo the top margin on the second heading because it usually looks better for the headings to be closer together than a paragraph followed by a heading should be.
+A veces tienes encabezados directamente debajo de otros. En esos casos, a menudo tienes que deshacer el margen superior del segundo encabezado porque generalmente se ve mejor que los encabezados estén más cerca uno del otro que un párrafo seguido de un encabezado.
 
-### When a heading comes after a paragraph …
+### Cuando un encabezado viene después de un párrafo...
 
-When a heading comes after a paragraph, we need a bit more space, like I already mentioned above. Now let's see what a more complex list would look like.
+Cuando un encabezado viene después de un párrafo, necesitamos un poco más de espacio, como ya mencioné anteriormente. Ahora veamos cómo se vería una lista más compleja.
 
-- **I often do this thing where list items have headings.**
+- **A menudo hago esto donde los elementos de la lista tienen encabezados.**
 
-  For some reason I think this looks cool which is unfortunate because it's pretty annoying to get the styles right.
+  Por alguna razón, creo que esto luce bien, lo cual es lamentable porque es bastante molesto conseguir los estilos correctos.
 
-  I often have two or three paragraphs in these list items, too, so the hard part is getting the spacing between the paragraphs, list item heading, and separate list items to all make sense. Pretty tough honestly, you could make a strong argument that you just shouldn't write this way.
+  A menudo tengo dos o tres párrafos en estos elementos de la lista, por lo que la parte difícil es conseguir que el espacio entre los párrafos, el encabezado del elemento de la lista y los elementos de la lista separados tengan sentido. Bastante difícil, honestamente, podrías argumentar sólidamente que simplemente no deberías escribir de esta manera.
 
-- **Since this is a list, I need at least two items.**
+- **Dado que esta es una lista, necesito al menos dos elementos.**
 
-  I explained what I'm doing already in the previous list item, but a list wouldn't be a list if it only had one item, and we really want this to look realistic. That's why I've added this second list item so I actually have something to look at when writing the styles.
+  Ya expliqué lo que estoy haciendo en el elemento de la lista anterior, pero una lista no sería una lista si solo tuviera un elemento, y realmente queremos que esto parezca realista. Por eso he añadido este segundo elemento de la lista para que realmente tenga algo que ver al escribir los estilos.
 
-- **It's not a bad idea to add a third item either.**
+- **No es una mala idea agregar un tercer elemento tampoco.**
 
-  I think it probably would've been fine to just use two items but three is definitely not worse, and since I seem to be having no trouble making up arbitrary things to type, I might as well include it.
+  Creo que probablemente hubiera estado bien usar solo dos elementos, pero tres definitivamente no es peor, y dado que aparentemente no tengo problemas para inventar cosas arbitrarias para escribir, podría incluirlo también.
 
-After this sort of list I usually have a closing statement or paragraph, because it kinda looks weird jumping right to a heading.
+Después de este tipo de lista, suelo tener una declaración o párrafo de cierre, porque parece un poco extraño pasar directamente a un encabezado.
 
-## Code should look okay by default.
+## El código debería verse bien por defecto.
 
-I think most people are going to use [highlight.js](https://highlightjs.org/) or [Prism](https://prismjs.com/) or something if they want to style their code blocks but it wouldn't hurt to make them look *okay* out of the box, even with no syntax highlighting.
+Creo que la mayoría de las personas van a utilizar [highlight.js](https://highlightjs.org/) o [Prism](https://prismjs.com/) o algo así si desean dar estilo a sus bloques de código, pero no estaría mal que se vieran *bien* desde el principio, incluso sin resaltado de sintaxis.
 
-Here's what a default `tailwind.config.js` file looks like at the time of writing:
+Así es como luce un archivo de configuración `tailwind.config.js` por defecto en el momento de escribir esto:
 
 ```js
 module.exports = {
@@ -123,82 +121,82 @@ module.exports = {
 }
 ```
 
-Hopefully that looks good enough to you.
+Espero que esto se vea lo suficientemente bien para ti.
 
-### What about nested lists?
+### ¿Qué pasa con las listas anidadas?
 
-Nested lists basically always look bad which is why editors like Medium don't even let you do it, but I guess since some of you goofballs are going to do it we have to carry the burden of at least making it work.
+Las listas anidadas generalmente lucen mal, por eso editores como Medium ni siquiera te permiten hacerlo, pero supongo que, dado que algunos de ustedes lo hacen, debemos llevar la carga de al menos hacer que funcione.
 
-1. Nested lists are rarely a good idea.
-   - You might feel like you are being really "organized" or something but you are just creating a gross shape on the screen that is hard to read.
-   - Nested navigation in UIs is a bad idea too, keep things as flat as possible.
-   - Nesting tons of folders in your source code is also not helpful.
-2. Since we need to have more items, here's another one.
-   - I'm not sure if we'll bother styling more than two levels deep.
-   - Two is already too much, three is guaranteed to be a bad idea.
-   - If you nest four levels deep you belong in prison.
-3. Two items isn't really a list, three is good though.
-   - Again please don't nest lists if you want people to actually read your content.
-   - Nobody wants to look at this.
-   - I'm upset that we even have to bother styling this.
+1. Las listas anidadas rara vez son una buena idea.
+   - Puede que sientas que estás siendo realmente "organizado" o algo así, pero en realidad estás creando una forma poco atractiva en la pantalla que es difícil de leer.
+   - La navegación anidada en las interfaces de usuario también es una mala idea, mantén las cosas lo más planas posible.
+   - Anidar montones de carpetas en tu código fuente tampoco es útil.
+2. Dado que necesitamos tener más elementos, aquí tienes otro.
+   - No estoy seguro de si nos molestaremos en darle estilo a más de dos niveles de profundidad.
+   - Dos ya es demasiado, tres está garantizado que es una mala idea.
+   - Si anidas cuatro niveles de profundidad, perteneces a prisión.
+3. Dos elementos realmente no son una lista, tres están bien.
+   - Nuevamente, por favor, no anides listas si quieres que la gente realmente lea tu contenido.
+   - Nadie quiere ver esto.
+   - Estoy molesto de que incluso tengamos que molestarnos en darle estilo a esto.
 
-The most annoying thing about lists in Markdown is that `<li>` elements aren't given a child `<p>` tag unless there are multiple paragraphs in the list item. That means I have to worry about styling that annoying situation too.
+Lo más molesto de las listas en Markdown es que los elementos `<li>` no tienen una etiqueta `<p>` secundaria a menos que haya varios párrafos en el elemento de la lista. Eso significa que también tengo que preocuparme por darle estilo a esa molesta situación.
 
-- **For example, here's another nested list.**
+- **Por ejemplo, aquí tienes otra lista anidada.**
 
-  But this time with a second paragraph.
+  Pero esta vez con un segundo párrafo.
 
-  - These list items won't have `<p>` tags
-  - Because they are only one line each
+  - Estos elementos de la lista no tendrán etiquetas `<p>`
+  - Porque son solo de una línea cada uno.
 
-- **But in this second top-level list item, they will.**
+- **Pero en este segundo elemento de lista de nivel superior, sí lo tendrán.**
 
-  This is especially annoying because of the spacing on this paragraph.
+  Esto es especialmente molesto debido al espaciado en este párrafo.
 
-  - As you can see here, because I've added a second line, this list item now has a `<p>` tag.
+  - Como puedes ver aquí, porque he agregado una segunda línea, este elemento de la lista ahora tiene una etiqueta `<p>`.
 
-    This is the second line I'm talking about by the way.
+    Esta es la segunda línea de la que estoy hablando, por cierto.
 
-  - Finally here's another list item so it's more like a list.
+  - Finalmente, aquí tienes otro elemento de la lista, así que es más parecido a una lista.
 
-- A closing list item, but with no nested list, because why not?
+- Un elemento de lista de cierre, pero sin lista anidada, porque ¿por qué no?
 
-And finally a sentence to close off this section.
+Y finalmente, una oración para cerrar esta sección.
 
-## There are other elements we need to style
+## Hay otros elementos que necesitamos darle estilo
 
-I almost forgot to mention links, like [this link to the Tailwind CSS website](https://tailwindcss.com/). We almost made them blue but that's so yesterday, so we went with dark gray, feels edgier.
+Casi olvidé mencionar los enlaces, como [este enlace al sitio web de Tailwind CSS](https://tailwindcss.com/). Casi los hicimos azules, pero eso es tan de ayer, así que optamos por un gris oscuro, se siente más audaz.
 
-We even included table styles, check it out:
+Incluso incluimos estilos para tablas, échales un vistazo:
 
-| Wrestler                | Origin       | Finisher           |
-| ----------------------- | ------------ | ------------------ |
-| Bret "The Hitman" Hart  | Calgary, AB  | Sharpshooter       |
-| Stone Cold Steve Austin | Austin, TX   | Stone Cold Stunner |
-| Randy Savage            | Sarasota, FL | Elbow Drop         |
-| Vader                   | Boulder, CO  | Vader Bomb         |
-| Razor Ramon             | Chuluota, FL | Razor's Edge       |
+| Luchador                | Origen       | Movimiento final    |
+| ----------------------- | ------------ | ------------------- |
+| Bret "The Hitman" Hart  | Calgary, AB  | Sharpshooter        |
+| Stone Cold Steve Austin | Austin, TX   | Stone Cold Stunner  |
+| Randy Savage            | Sarasota, FL | Elbow Drop          |
+| Vader                   | Boulder, CO  | Vader Bomb          |
+| Razor Ramon             | Chuluota, FL | Razor's Edge        |
 
-We also need to make sure inline code looks good, like if I wanted to talk about `<span>` elements or tell you the good news about `@tailwindcss/typography`.
+También necesitamos asegurarnos de que el código en línea se vea bien, como si quisiera hablar sobre elementos `<span>` o contarte la buena noticia sobre `@tailwindcss/typography`.
 
-### Sometimes I even use `code` in headings
+### A veces incluso uso `code` en encabezados
 
-Even though it's probably a bad idea, and historically I've had a hard time making it look good. This *"wrap the code blocks in backticks"* trick works pretty well though really.
+Aunque probablemente no sea una buena idea y, históricamente, he tenido dificultades para que se vea bien. Sin embargo, este truco de *"envolver los bloques de código entre comillas invertidas"* funciona bastante bien, en realidad.
 
-Another thing I've done in the past is put a `code` tag inside of a link, like if I wanted to tell you about the [`tailwindcss/docs`](https://github.com/tailwindcss/docs) repository. I don't love that there is an underline below the backticks but it is absolutely not worth the madness it would require to avoid it.
+Otra cosa que he hecho en el pasado es poner una etiqueta `code` dentro de un enlace, como si quisiera hablarte del repositorio [`tailwindcss/docs`](https://github.com/tailwindcss/docs). No me encanta que haya un subrayado debajo de las comillas invertidas, pero definitivamente no vale la pena la locura que requeriría evitarlo.
 
-#### We haven't used an `h4` yet
+#### Todavía no hemos usado un `h4`
 
-But now we have. Please don't use `h5` or `h6` in your content, Medium only supports two heading levels for a reason, you animals. I honestly considered using a `before` pseudo-element to scream at you if you use an `h5` or `h6`.
+Pero ahora lo hemos hecho. Por favor, no uses `h5` o `h6` en tu contenido, Medium solo admite dos niveles de encabezado por una razón, animales. Honestamente, consideré usar un pseudo-elemento `before` para gritarte si usas un `h5` o `h6`.
 
-We don't style them at all out of the box because `h4` elements are already so small that they are the same size as the body copy. What are we supposed to do with an `h5`, make it *smaller* than the body copy? No thanks.
+No les damos estilo por defecto en absoluto porque los elementos `h4` ya son tan pequeños que tienen el mismo tamaño que el cuerpo del texto. ¿Qué se supone que debemos hacer con un `h5`, ¿hacerlo *más pequeño* que el cuerpo del texto? No, gracias.
 
-### We still need to think about stacked headings though.
+### Todavía necesitamos pensar en encabezados apilados, sin embargo.
 
-#### Let's make sure we don't screw that up with `h4` elements, either.
+#### Asegurémonos de no arruinarlo con elementos `h4`, tampoco.
 
-Phew, with any luck we have styled the headings above this text and they look pretty good.
+uf, con suerte hemos dado estilo a los encabezados anteriores a este texto y se ven bastante bien.
 
-Let's add a closing paragraph here so things end with a decently sized block of text. I can't explain why I want things to end that way but I have to assume it's because I think things will look weird or unbalanced if there is a heading too close to the end of the document.
+Añadamos un párrafo de cierre aquí para que las cosas terminen con un bloque de texto de tamaño decente. No puedo explicar por qué quiero que las cosas terminen así, pero debo suponer que es porque creo que las cosas se verán extrañas o desequilibradas si hay un encabezado demasiado cerca del final del documento.
 
-What I've written here is probably long enough, but adding this final sentence can't hurt.
+Lo que he escrito aquí probablemente es lo suficientemente largo, pero agregar esta última oración no puede hacer daño.
