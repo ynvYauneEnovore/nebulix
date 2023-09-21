@@ -5,12 +5,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 let allPosts = await getCollection('posts');
 allPosts.sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
 ---
-
 <BaseLayout>
 
     <div class="text-center">
         <img
-          src="./yovan.webp"
+          src="https://avatars.githubusercontent.com/u/88410835?s=400&v=4"
           class="mx-auto mb-4 w-32 rounded-lg"
           alt="YovaEnovore" />
         <h5 class="mb-2 text-xl font-medium leading-tight">Yovan R. Enovore</h5>
